@@ -3,9 +3,6 @@ import Home from './Home';
 import Join from './Join';
 import Login from './Login';
 
-const GITHUB_LOGIN_PAGE =
-  'https://github.com/login/oauth/authorize?client_id=Iv1.af98f0e9dc07b4d4';
-
 function App() {
   return (
     <div className='App'>
