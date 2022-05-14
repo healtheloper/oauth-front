@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Join from './Join';
+import Login from './Login';
+
+const GITHUB_LOGIN_PAGE =
+  'https://github.com/login/oauth/authorize?client_id=Iv1.af98f0e9dc07b4d4';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/'>
+            <Route index element={<Home />} />
+            <Route path='join' element={<Join />} />
+            <Route path='login' element={<Login />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
